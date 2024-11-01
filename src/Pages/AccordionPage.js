@@ -1,4 +1,4 @@
-import Accordion from "./Components/Accordion"
+import Accordion from "../Components/Accordion"
 function AccordionPage(){
     const items=[{
         key:'123',
@@ -15,3 +15,4 @@ function AccordionPage(){
 
     return <Accordion items={items}/>
 }
+export default AccordionPage
