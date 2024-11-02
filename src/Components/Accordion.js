@@ -14,7 +14,10 @@ const icon = <span>
  
         return (
             <div key={item.id}>
-            <div onClick={()=>setExpandedIndex(index)}>{item.lable}</div>
+            <div onClick={()=>setExpandedIndex(index)}>
+                {icon}
+                {item.lable}
+                </div>
             {isExpanded && <div>{item.content}</div>}
             </div>
         )
