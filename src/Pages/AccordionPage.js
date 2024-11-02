@@ -6,7 +6,7 @@ function AccordionPage(){
         content:'Here is more information'
     },
     {
-        key:'123',
+        key:'1234',
         lable:'hello',
         content:'Here is more information'
     }
