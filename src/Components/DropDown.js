@@ -1,27 +1,31 @@
 import { useState } from "react"
 
-function DropDown({options}){
+function DropDown({options ,selection,onSelect}){
 
 const [isOpen,setIsopen]=useState(false)
 
 const handleClick = ()=>{
     setIsopen(!isOpen)
 
-    //what option has the user selected
+
 }
 
-const handleOptionClick = ()=>{
-    console.log('i should close')
+const handleOptionClick = (event)=>{
+    //close dropdown
     setIsopen(false)
+        //what option has the user selected
+onSelect(event)
+
 }
+
     const renderedDropDown = options.map((option)=>{
         return (
-        <div onClick={handleOptionClick} key={option.value}>
+        <div onClick={()=>handleOptionClick(option)} key={option.value}>
         {option.lable}</div>
         )
     }) 
     return <div>
-        <div  onClick={handleClick}>Select...</div>
+        <div  onClick={handleClick}>select</div>
     {isOpen && <div>{renderedDropDown}</div>}
         </div>
 }

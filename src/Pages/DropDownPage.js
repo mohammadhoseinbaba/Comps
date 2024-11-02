@@ -1,6 +1,14 @@
 import DropDown from "../Components/DropDown"
+import { useState } from "react"
 
 function DropDownPage(){
+
+    const [selection,setSelection]=useState(null)
+
+const handSelect =(option){
+setSelection(option)
+}
+
     const options =[
         {lable:'Red',value: ' red'},
         {lable:'Blue' , value:'blue'},
@@ -9,7 +17,7 @@ function DropDownPage(){
    return(
     <div>
         
-        <DropDown options={options}></DropDown>
+        <DropDown options={options} selection={selection} onSelect={handSelect}></DropDown>
     </div>
 
    )
