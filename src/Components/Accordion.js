@@ -9,9 +9,8 @@ function Accordion ({items}){
 const isExpanded = index===expandedIndex
 
         return (
-            <div>
-            <div>{item.id}</div>
-            <div>{item.lable}</div>
+            <div key={item.id}>
+            <div onClick={()=>setExpandedIndex(index)}>{item.lable}</div>
             {isExpanded && <div>{item.content}</div>}
             </div>
         )
