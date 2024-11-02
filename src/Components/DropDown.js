@@ -25,16 +25,8 @@ onSelect(event)
         )
     }) 
 
-
-let content = 'select...';
-if (selection){
-    content = selection.lable
-}
-
-
-
     return <div>
-        <div  onClick={handleClick}>{content}</div>
+        <div  onClick={handleClick}>{selection?.length||'select'}</div>
     {isOpen && <div>{renderedDropDown}</div>}
         </div>
 }
