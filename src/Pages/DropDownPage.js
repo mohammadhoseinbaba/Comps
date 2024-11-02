@@ -5,7 +5,7 @@ function DropDownPage(){
 
     const [selection,setSelection]=useState(null)
 
-const handSelect =(option){
+const handleSelect =(option)=>{
 setSelection(option)
 }
 
@@ -17,7 +17,7 @@ setSelection(option)
    return(
     <div>
         
-        <DropDown options={options} selection={selection} onSelect={handSelect}></DropDown>
+        <DropDown options={options} selection={selection} onSelect={handleSelect}></DropDown>
     </div>
 
    )

@@ -24,8 +24,17 @@ onSelect(event)
         {option.lable}</div>
         )
     }) 
+
+
+let content = 'select...';
+if (selection){
+    content = selection.lable
+}
+
+
+
     return <div>
-        <div  onClick={handleClick}>select</div>
+        <div  onClick={handleClick}>{content}</div>
     {isOpen && <div>{renderedDropDown}</div>}
         </div>
 }
