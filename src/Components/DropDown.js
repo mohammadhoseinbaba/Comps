@@ -11,7 +11,16 @@ const divEL = useRef()
 
 useEffect(()=>{
 const handler=(event)=>{
-    console.log(divEL)
+if (!divEL.current){
+    return
+}
+
+
+
+if (!divEL.current.contains(event.target)){
+    setIsopen(false)
+}
+
 }
 document.addEventListener('click',handler,true)
 
