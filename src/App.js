@@ -7,6 +7,7 @@ function App (){
         <div><ButtonPage /></div>
         <div><AccordionPage /></div>
         <div><DropDownPage/></div>
+
     </div>
 }
 export default App
