@@ -1,6 +1,8 @@
 import { useState } from "react"
+import {GoChevronDown , GoChevronLeft} from 'react-icons/go'
+import Panel from "./Panel"
 
-function DropDown({options ,selection,onSelect}){
+function DropDown({options ,value, onChange}){
 
 const [isOpen,setIsopen]=useState(false)
 
@@ -11,23 +13,23 @@ const handleClick = ()=>{
 }
 
 const handleOptionClick = (event)=>{
-    //close dropdown
+        //close dropdown
     setIsopen(false)
         //what option has the user selected
-onSelect(event)
+onChange(event)
 
 }
 
     const renderedDropDown = options.map((option)=>{
         return (
-        <div onClick={()=>handleOptionClick(option)} key={option.value}>
+        <div className="hover:bg-sky-100 rounded cursor-pointer p-1" onClick={()=>handleOptionClick(option)} key={option.value}>
         {option.lable}</div>
         )
     }) 
 
-    return <div>
-        <div  onClick={handleClick}>{selection?.length||'select'}</div>
-    {isOpen && <div>{renderedDropDown}</div>}
+    return <div className="w-48 relative">
+        <Panel className="flex justify-between items-center  cursor-pointer " onClick={handleClick}>{value?.lable||'select'}{isOpen ? <GoChevronDown/> : <GoChevronLeft/>}</Panel>
+    {isOpen && <Panel className="absolute top-full ">{renderedDropDown}</Panel>}
         </div>
 }
 export default DropDown

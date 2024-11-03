@@ -17,7 +17,7 @@ setSelection(option)
    return(
     <div>
         
-        <DropDown options={options} selection={selection} onSelect={handleSelect}></DropDown>
+        <DropDown options={options} value={selection} onChange={handleSelect}></DropDown>
     </div>
 
    )
