@@ -4,9 +4,9 @@ import DropDownPage from "./Pages/DropDownPage"
 
 function App (){
     return <div>
-        <div><ButtonPage /></div>
+        {/* <div><ButtonPage /></div>
         <div><AccordionPage /></div>
-        <div><DropDownPage/></div>
+        <div><DropDownPage/></div> */}
 
     </div>
 }
