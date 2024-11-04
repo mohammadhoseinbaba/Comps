@@ -8,6 +8,8 @@ import { NavigationProvider } from './Context/Navigation';
 const el = document.getElementById('root')
 const root = ReactDOM.createRoot(el)
 root.render(
-    <NavigationProvider><App /></NavigationProvider>
+    <NavigationProvider>
+        <App />
+    </NavigationProvider>
     
 )

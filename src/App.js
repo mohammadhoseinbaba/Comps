@@ -1,13 +1,23 @@
 import AccordionPage from "./Pages/AccordionPage"
-import ButtonPage from "./Pages/ButtonPage"
 import DropDownPage from "./Pages/DropDownPage"
+import Link from "./Components/Link"
+import Route from "./Components/Route"
 
 function App (){
-    return <div>
-        {/* <div><ButtonPage /></div>
-        <div><AccordionPage /></div>
-        <div><DropDownPage/></div> */}
-
+    return(
+         
+    <div>
+<Link to="/accordion" >Accordion</Link>
+<Link to="/dropdown">DropDown</Link>
+    <div>
+<Route path="/accordion">
+<AccordionPage/>
+</Route>
+<Route path="/dropdown">
+    <DropDownPage/>
+</Route>
     </div>
+</div>
+)
 }
 export default App
