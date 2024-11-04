@@ -1,20 +1,24 @@
 import AccordionPage from "./Pages/AccordionPage"
 import DropDownPage from "./Pages/DropDownPage"
-import Link from "./Components/Link"
 import Route from "./Components/Route"
+import SideBar from "./Components/SideBar"
+import ButtonPage from "./Pages/ButtonPage"
+
 
 function App (){
     return(
          
-    <div>
-<Link to="/accordion" >Accordion</Link>
-<Link to="/dropdown">DropDown</Link>
-    <div>
+    <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+<SideBar/>
+    <div className="col-span-5">
 <Route path="/accordion">
 <AccordionPage/>
 </Route>
-<Route path="/dropdown">
+<Route path="/">
     <DropDownPage/>
+</Route>
+<Route path="/button">
+    <ButtonPage/>
 </Route>
     </div>
 </div>

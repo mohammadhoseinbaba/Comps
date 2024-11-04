@@ -8,9 +8,9 @@ useEffect(()=>{
     const handler =()=>{
 setCurrrentPath(window.location.pathname)
     }
-    window.addEventListener('popState',handler)
+    window.addEventListener('popstate',handler)
 return ()=>{
-    window.removeEventListener('popState', handler)
+    window.removeEventListener('popstate', handler)
 }
 
 },[])
