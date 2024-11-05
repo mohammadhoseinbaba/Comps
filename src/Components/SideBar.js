@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react"
 import Link from "./Link"
 
 
@@ -6,7 +5,8 @@ function SideBar(){
 const links=[
     {lable:'Dropdown', path:'/'},
     {lable:'Accordion' , path:'/accordion'},
-    {lable:'button' , path:'/button'}
+    {lable:'button' , path:'/button'},
+    {lable:'modal' , path:'/modalpage'}
 ]
 
 const renderedLinks = links.map((link)=>{
