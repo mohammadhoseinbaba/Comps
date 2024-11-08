@@ -9,7 +9,7 @@ function Table({fruits , config , keyFN}){
 
 const renderedfruits = fruits.map((rowdata)=>{
     const renderedcolumns = config.map((column)=>{
-        return <td key={column.lable}>{column.render(rowdata)}</td>
+        return <td className="p-2" key={column.lable}>{column.render(rowdata)}</td>
     }
         )
 return( 
