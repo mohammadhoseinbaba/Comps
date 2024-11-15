@@ -7,7 +7,8 @@ const links=[
     {lable:'Accordion' , path:'/accordion'},
     {lable:'button' , path:'/button'},
     {lable:'modal' , path:'/modalpage'},
-    {lable:'table' , path:'/tablepage'}
+    {lable:'table' , path:'/tablepage'},
+    {lable:'counter' , path:'/counter'}
 ]
 
 const renderedLinks = links.map((link)=>{
